@@ -1,9 +1,15 @@
-import React from "react"
+import React, { useContext } from "react"
 import mainlogo from "../../assets/main-icon.png";
 import { FaSearch } from "react-icons/fa";
 
+import map from "../../assets/pin.gif"
+import { useLocation } from "../../Context/locationContext";
+
+
 const Header = () => {
 
+const {location, loading, error} = useLocation();
+    
     return (
         <div className="w-full text-sm bg-white">
             {/* Top Navbar */}
@@ -25,7 +31,9 @@ const Header = () => {
                     {/* Right Part */}
                     <div className="flex items-center space-x-6">
                         <div className="text-sm font-medium cursor-pointer ">
-                            Karachi West &nbsp;▼
+                            {loading && <img src ={map} alt="loading..." className="w-10 h-10" />}
+                            {location && <p>{location} &nbsp;▼</p>}
+                            {/* Karachi West &nbsp;▼ */}
                         </div>
                         <button className="bg-[#f84464] cursor-pointer text-white px-4 py-1.5 rounded text-sm">
                             Sign in

@@ -2,8 +2,11 @@ import mainlogo from "../../assets/main-icon-white.png";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterest, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
+    
     return (
+        
         <footer className="bg-[#2b2b2b] text-gray-400 text-sm" >
+            
             <div className="border-t border-gray-600 w-full "/>
                 <div className="flex flex-col items-center py-6">
                     {/* Logo */}

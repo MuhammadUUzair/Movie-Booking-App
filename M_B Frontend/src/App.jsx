@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom"
 
 import Header from "./Components/Shared/Header"
 import Footer from "./Components/Shared/Footer"
+import Home from "./Pages/Home"
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <Header/>
       <main className="grow">
         <Routes>
-          <Route path="/" element={<h1>Home Page</h1>}  />
+          <Route path="/" element={<Home/>}  />
           <Route path="/profile/:id" element={<h1>Profile Page</h1>}/>
           <Route path="/movies" element={<h1>Movies Page</h1>}/>
         </Routes>
