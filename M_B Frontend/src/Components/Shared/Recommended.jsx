@@ -21,10 +21,10 @@ const Recommended = () => {
                                 <img 
                                 src={movie.img} 
                                 alt={movie.title}
-                                className="w-full h-75 object-cover rounded"
+                                className="w-full h-75 object-cover rounded rounded-b-none"
                                 />
                             </div>
-                            <div className="bg-black text-white text-sm px-2 py-1 flex items-center justify-between">
+                            <div className="bg-black text-white text-sm px-2 py-1 flex items-center justify-between rounded-b">
                                 <span>⭐{movie.rating}/10</span>
                                 <span>{movie.votes} Votes</span>
                             </div>
