@@ -4,6 +4,7 @@ import Header from "./Components/Shared/Header"
 import Footer from "./Components/Shared/Footer"
 import Home from "./Pages/Home"
 import Movies from "./Pages/Movies"
+import MovieDetails from "./Pages/MovieDetails"
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
           <Route path="/" element={<Home/>}  />
           <Route path="/profile/:id" element={<h1>Profile Page</h1>}/>
           <Route path="/movies" element={<Movies/>}/>
+          <Route path="/movies/:movieId" element = {<MovieDetails/>}/>
+         
         </Routes>
       </main>
         <Footer/>
