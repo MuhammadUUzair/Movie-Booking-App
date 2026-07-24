@@ -1,5 +1,7 @@
 import m4 from "../assets/m4.avif";
 import { MdShare } from "react-icons/md";
+import { filters } from "../Utils/constants";
+import TheaterTimings from "../Components/Movies/TheaterTiminigs";
 const movie = {
 
     id: 4,
@@ -88,13 +90,51 @@ const MovieDetails = () => {
                     </div>
                     {/* Share Button */}
                     <div className="absolute top-0 right-0 cursor-pointer">
-                        <button className="cursor-pointer bg-[#3a3a3a] px-4 py-2 rounded text-sm flex items-center gap-2">                        
-                            <MdShare/> Share
+                        <button className="cursor-pointer bg-[#3a3a3a] px-4 py-2 rounded text-sm flex items-center gap-2">
+                            <MdShare /> Share
                         </button>
 
                     </div>
-                    <div></div>
+
                 </div>
+            </div>
+
+            {/* Show Timings */}
+            <div className="max-w-7xl mx-auto mt-8 ">
+
+                {/* Filters */}
+                <div className=" flex flex-wrap items-center gap-2 mb-2">
+                    {
+                        filters.map((filter, i) => (
+                            <button key={i} className=" border border-gray-300  px-5 py-1 rounded-lg text-sm hover:bg-gray-100
+                             cursor-pointer"
+                            > {filter}
+                            </button>
+                        ))
+                    }
+
+                </div>
+                <hr className="my-2 border-gray-200" />
+
+                {/* Avalability Status */}
+                <div className=" flex items-center gap-4 rounded mb-1 py-2 text-sm px-8 bg-gray-200">
+                    <span className=" flex items-center gap-1">
+                        <span className=" w-2 h-2 mr-1 bg-black rounded-full inline-block"></span>
+                        <small className=" font-semibold text-gray-500">Available</small>
+                    </span>
+                    <span className=" flex items-center gap-1">
+                        <span className=" w-2 h-2 mr-1 font-semibold bg-yellow-400 rounded-full inline-block"></span>
+                        <small className=" font-semibold text-gray-500">Filling Fast</small>
+                    </span>
+                    <span className=" flex items-center gap-1">
+                        <span className=" w-2 h-2 mr-1 font-semibold bg-red-400 rounded-full inline-block"></span>
+                        <small className=" font-semibold text-gray-500">Almost full</small>
+                    </span>
+
+                </div>
+
+                {/* Theater Timings */}
+                <TheaterTimings/>
             </div>
 
         </>

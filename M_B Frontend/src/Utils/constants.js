@@ -215,3 +215,7 @@ export const languages = [
   "Japanese",
   "Telugu",
 ];
+
+// Filters
+
+export const filters = ["2D", "3D", "Wheelchair Friendly", "Premium Seats", "Recliners", "IMAX", "PVR PXL", "4DX", "Laser", "Dolby Atmos"];
